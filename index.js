@@ -290,9 +290,8 @@ function counterMakerWithLimit(limit) {
   function counter() {
     if (count >= limit){
       count = -1;
-    } else {
-      count += 1;
     }
+    ++count;
     return count;
   }
   return counter;
