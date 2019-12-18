@@ -159,7 +159,13 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
-//try this after finishing higher order array methods
+  const unique = []; // collect unique items here
+  list.forEach(item => {
+    if (!unique.includes(item)){ //check to see if item is already in unique list
+      unique.push(item); // if not, add it
+    }
+  });
+  return unique; // return unique list
 }
 
 
